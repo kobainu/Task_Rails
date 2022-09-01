@@ -1,0 +1,14 @@
+ja:
+  activerecord:
+    models:
+      post: スケジュール
+    attributes:
+      post:
+        title: タイトル 
+        start_date: 開始日
+        end_date: 終了日
+        memo: スケジュールメモ
+  time:
+    formats:
+      default:  "%Y年 %m月 %d日"
+      datetime: "%Y年 %m月 %d日 %H時 %M分"

@@ -1,0 +1,45 @@
+<h2>スケジュール一覧</h2>
+
+<% if flash[:notice] %>
+  <p class="notice"><%= flash[:notice] %></p>
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>タイトル</th>
+      <th>開始日</th>
+      <th>終了日</th>
+      <th>終日</th>
+      <th>スケジュール更新日時</th>
+      <th>確認</th>
+      <th>編集</th>
+      <th>削除</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.id %></td>
+        <td><%= post.title %></td>
+        <td><%= l post.start_date %></td>
+        <td><%= l post.end_date %></td>
+        <td><% if post.all_day == "1" %>○<% end %></td>
+        <td><%= l post.updated_at, format: :datetime %></td>
+        <td>
+          <%= link_to "確認", post %>
+        </td>
+        <td>
+          <%= link_to "編集", [:edit, post] %>
+        </td>
+        <td>
+          <%= link_to "削除", post, method: :delete, data: { confirm: "本当に削除しますか？" } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p><%= link_to "スケジュール新規作成", :new_post %></p>
