@@ -1,0 +1,95 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 100px;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 30px;
+  color: white;
+  background-color: rgb(35, 35, 162);
+}
+
+footer{
+  width: 100%;
+  padding: 15px;
+  margin-top: 30px;
+  color: white;
+  background-color: rgb(35, 35, 162);
+  position: absolute;/*←絶対位置*/
+  bottom: 0; /*下に固定*/
+}
+
+.main_container {
+  margin: 50px 15px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  width: 350px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+input[type=submit] {
+  width: auto;
+  margin-bottom: 10px;
+}
+
+#post_memo {
+  width: 350px;
+  height: 200px;
+  font-size: 16px;
+}
+
+.partial {
+  border: 1px solid red;
+  padding: 15px;
+}
+
+table th {
+  background-color: skyblue;
+  padding: 10px 20px;
+}
+
+table td {
+  background-color: #d5e4f9;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.notice {
+  background-color: #ccf;
+  padding: 15px;
+  width: 400px;
+  text-align: center;
+}
+
+.alert {
+  background-color: rgb(255, 139, 139);
+  padding: 15px;
+  width: 400px;
+  text-align: center;
+}
+
+.error_messages {
+  color: red;
+  font-weight: bold;
+}
+
+div.field_with_errors {
+  background-color: rgb(255, 139, 139);
+  padding: 2px;
+}
